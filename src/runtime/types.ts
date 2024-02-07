@@ -211,6 +211,12 @@ type ProviderLocalRefresh = Omit<ProviderLocal, 'type'> & {
      */
     signInResponseRefreshTokenPointer?: string;
     /**
+     *
+     * @default refreshToken  Sets `refreshToken` as the key for the refresh token in the refresh request body
+     * @example refresh       
+     */
+    refreshRequestTokenKeyName?: string;
+    /**
      * Maximum age to store the authentication token for. After the expiry time the token is automatically deleted on the application side, i.e., in the users' browser.
      *
      * Note: Your backend may reject / expire the token earlier / differently.
